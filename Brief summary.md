@@ -2,7 +2,7 @@
 
 <br/>
 
-**Visformer: **
+**Visformer:**
 over-fitting especially when the training data is limited.
 : transformer model -> convolution model.
 Consist this model is better than BoTNet. This paper analyzes the difference between CNN and Transformer. Important paper!
