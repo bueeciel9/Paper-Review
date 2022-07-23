@@ -27,9 +27,13 @@ RDIoU: if VoxSeT uses 3D IoU, check whether i can change it to RDIoU.
 RDIoU: exsiting 3D IoU is sensitive to rotation, thus can cause training instability and detection performance deterioration.
 -> RIoU mitigate the rotation-sensitivity issue, and produce more fficient optimization objectives compared ith 3D IoU during the training stage.
 <br/>
+<br/>
+
 Voxsl-MAE: MAE-style pre-training on voxelized point clouds. good for large-scale point cloud dataset.
 pretty data-efficient. and reduces the need for annotated data. I can refer it for futuer research.
 <br/>
+<br/>
+
 Masked autoencoder(MAE): use only 25% of patches(masked random patches) as input image and reconstruct the missing pixels.
 And then, reconstruct the original image from the latent representation and mask tokens.
 VERY GOOD PERFORMANCE. I CAN RERER IT.
