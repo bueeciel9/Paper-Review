@@ -8,7 +8,7 @@ Single-stride Sparse Transformer (SST)
 1.	Scale challenges in 3D object detection
  
  ![image](https://user-images.githubusercontent.com/65759092/180610854-851a486c-629f-45c0-ab62-679a33322c54.png)
-
+<p align="center"><img src="image_src"></p>
 
 This figure shows the scales of objects in 2D image exhibit a long-tail distribution, while in 3D space they are quite concentrated due to the non-projective transformation used in voxelization. 
 The object size in 3D object detectors is usually tiny while no large objects exist
