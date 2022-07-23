@@ -95,6 +95,7 @@ Based on this theory, I am planning to apply the convolution in VoxSeT.
 <br/>
 
 11. **Single-stride Sparse Transformer (SST)**
+
 1.	Scale challenges in 3D object detection
 <br/>
 
