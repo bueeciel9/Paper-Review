@@ -19,6 +19,7 @@ There are two issues lead to discard of downsampling operators:
 2.	Single-stride Sparse Transformer(SST)
 ->	Sparse Regional Attention(SRA) which is local attention mechanism is proposed, and by stacking SRA layers, Single-stride Sparse Transformer(SST) is proposed. 
 <br/> 
+<br/>
  
 <p align="center"><img src="https://user-images.githubusercontent.com/65759092/180611041-15973bb0-c966-4970-818f-e51a99b56c87.png"></p>
 <br/>
