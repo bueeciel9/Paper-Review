@@ -1,4 +1,4 @@
-!!!1. **Focal transformer:**
+1. !!!**Focal transformer:**
 The ability of capturing local and global visual dependencies through self-attention is the key to its success. 
 -> Focal Attention: a new attention mechanism that incorporates both fine-gradined local and coarse-grained global interactions.
 Each token attends its closest surrounding tokens at fine granuarity and the tokens far away at coarse granularity, and thus can capture both short- and long-range visual dependencies efficiently and effectively. 
