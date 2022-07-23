@@ -20,7 +20,7 @@ There are two issues lead to discard of downsampling operators:
 ->	Sparse Regional Attention(SRA) which is local attention mechanism is proposed, and by stacking SRA layers, Single-stride Sparse Transformer(SST) is proposed. 
 
  
-<p align="center"><img src="https://user-images.githubusercontent.com/65759092/180610854-851a486c-629f-45c0-ab62-679a33322c54.png](https://user-images.githubusercontent.com/65759092/180610848-21a811cb-db6d-4dc5-8792-16454df72b1c.png"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/65759092/180610854-851a486c-629f-45c0-ab62-679a33322c54.png"></p>
 
 
 RDIoU: if VoxSeT uses 3D IoU, check whether i can change it to RDIoU.
