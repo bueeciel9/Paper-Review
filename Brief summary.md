@@ -94,10 +94,11 @@ Based on this theory, I am planning to apply the convolution in VoxSeT.
 
 **Single-stride Sparse Transformer (SST)**
 1.	Scale challenges in 3D object detection
- 
+<br/>
+
 <p align="center"><img src="https://user-images.githubusercontent.com/65759092/180610854-851a486c-629f-45c0-ab62-679a33322c54.png"></p>
 <br/>
-<br/>
+
 This figure shows the scales of objects in 2D image exhibit a long-tail distribution, while in 3D space they are quite concentrated due to the non-projective transformation used in voxelization. 
 The object size in 3D object detectors is usually tiny while no large objects exist
 ->	Do we really need downsampling in 3D object detectors?
@@ -107,17 +108,17 @@ There are two issues lead to discard of downsampling operators:
 2)	The decrease of receptive field
 2.	Single-stride Sparse Transformer(SST)
 ->	Sparse Regional Attention(SRA) which is local attention mechanism is proposed, and by stacking SRA layers, Single-stride Sparse Transformer(SST) is proposed. 
-<br/> 
+<br/>
 
 <p align="center"><img src="https://user-images.githubusercontent.com/65759092/180611041-15973bb0-c966-4970-818f-e51a99b56c87.png"></p>
 <br/>
 
-**RDIoU**if VoxSeT uses 3D IoU, check whether i can change it to RDIoU.
+**RDIoU:** if VoxSeT uses 3D IoU, check whether i can change it to RDIoU.
 RDIoU: exsiting 3D IoU is sensitive to rotation, thus can cause training instability and detection performance deterioration.
 -> RIoU mitigate the rotation-sensitivity issue, and produce more fficient optimization objectives compared ith 3D IoU during the training stage.
 <br/>
 
-**Voxsl-MAE**: MAE-style pre-training on voxelized point clouds. good for large-scale point cloud dataset.
+**Voxsl-MAE:** MAE-style pre-training on voxelized point clouds. good for large-scale point cloud dataset.
 pretty data-efficient. and reduces the need for annotated data. I can refer it for futuer research.
 <br/>
 
