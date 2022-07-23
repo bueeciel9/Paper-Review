@@ -1,39 +1,39 @@
-**Focal transformer:**
+!!!1. **Focal transformer:**
 The ability of capturing local and global visual dependencies through self-attention is the key to its success. 
 -> Focal Attention: a new attention mechanism that incorporates both fine-gradined local and coarse-grained global interactions.
 Each token attends its closest surrounding tokens at fine granuarity and the tokens far away at coarse granularity, and thus can capture both short- and long-range visual dependencies efficiently and effectively. 
 <br/>
 
-**Visformer:**
+2. **Visformer:**
 over-fitting especially when the training data is limited.
 : transformer model -> convolution model.
 Consist this model is better than BoTNet. This paper analyzes the difference between CNN and Transformer. Important paper!
 <br/>
 
-**MobileFormer:** Different from vision transformer that uses image patches to form tokens, the transformer in Mobile-Former takes very few learnable tokens as input that are randomly initialized.
+3. **MobileFormer:** Different from vision transformer that uses image patches to form tokens, the transformer in Mobile-Former takes very few learnable tokens as input that are randomly initialized.
 Mobile(MobileNet) and Former communicate through a bidirectional bridge.
 The paper starts with this question: How to design efficient networks to effectively encode both local processing and global interaction? -> combine convolution and vision transformer. Design paradigm from series to parallel.
 <br/>
 
-**BoTNet:** Like the ResNet Bottleneck, invented Bottleneck Transformer
+4. **BoTNet:** Like the ResNet Bottleneck, invented Bottleneck Transformer
 Instead of 3*3 conv, by putting MHSA into the bottleneck, made bottleneck transformer.
 This model is faster than EfficientNet. So, in the future, I can change the CNN to MHSA and check the performance. If it’s good, for the general model, we can modify the model.
 <br/>
 
-**DAT(Deformable attention transformer)**
+5. **DAT(Deformable attention transformer)**
 Like ViT, using dense attention costs lots of computation and features can be influenced by irrelevant parts. Sparse attention is data agnostic and may limit the ability to model long range relations.
 	DAT, a general backbone model with deformable attention for both image classification and dense prediction tasks. deformable self-attention module: positions of key and value pairs in self-attention are selected in a data-dependent way. 
 As a backbone model, accuracy is better than Swin, but need more understand this model.
 <br/>
 
-**CAT-DET** uses Pointformer branch, Imageformer branch, and Cross-Modal Transformer module. Imageformer branch compensates the occluded part which can happen in Pointformer branch. + One-way multi-modal data augmentation. 
+6. **CAT-DET** uses Pointformer branch, Imageformer branch, and Cross-Modal Transformer module. Imageformer branch compensates the occluded part which can happen in Pointformer branch. + One-way multi-modal data augmentation. 
 So, I can refer this model when I make the multi-modal fusion later. 
 <br/>
 
-**DEPTHFORMER** presented a multiscale encoder-decoder structure, in which it suggested a better way to fuse encoder and decoder features. But as far as I study, for the 3D object detection using outdoor dataset, multiscale encoder-decoder cannot be effective. 
+7. **DEPTHFORMER** presented a multiscale encoder-decoder structure, in which it suggested a better way to fuse encoder and decoder features. But as far as I study, for the 3D object detection using outdoor dataset, multiscale encoder-decoder cannot be effective. 
 <br/>
 
-**VoxSeT**
+!!!8. **VoxSeT**
 <br/>
 
 Hard to compute the self-attention on large-scale point cloud data because point cloud is a long sequence and unevenly distributed in 3D space. -> Existing methods compute self-attention locally by grouping the points into clusters of the same size or perform convolutional self-attention on discretized representation. VoxSeT use set-to-set translation. 
@@ -69,7 +69,7 @@ They empirically found that applying large voxels can learn richer context infor
 <p align = "center"><img src="https://user-images.githubusercontent.com/65759092/180611414-261fb491-9773-46e9-8a0c-a7f50fd6546c.png"></p>
 <br/>
 
-**DESTR**
+9. **DESTR**
 The reasons Transformers slightly lag in performance behind CNN-based detectors:
 1) Cross-attention is used for both classification and bounding-box regression tasks.
 2) Transformer's decoder poorly initializes content queries.
@@ -83,7 +83,7 @@ Solution
 <p align="center"><img src="https://user-images.githubusercontent.com/65759092/180611311-cd0db086-bb70-40b3-9f8d-ca7883f3fb89.png"></p>
 <br/>
 
-**Early Convolutions help Transformers See Better**
+!!!10. **Early Convolutions help Transformers See Better**
 ViT models are sensitive to the choice of optimizer (adamW vs SGD), hyperparameters. In this paper, this reason is called patchify system of ViT models. 
 <br/>
 
@@ -94,7 +94,7 @@ Therefore, it is said that using a small 3*3 convolution instead of a patch does
 Based on this theory, I am planning to apply the convolution in VoxSeT.
 <br/>
 
-**Single-stride Sparse Transformer (SST)**
+11. **Single-stride Sparse Transformer (SST)**
 1.	Scale challenges in 3D object detection
 <br/>
 
@@ -115,15 +115,15 @@ There are two issues lead to discard of downsampling operators:
 <p align="center"><img src="https://user-images.githubusercontent.com/65759092/180611041-15973bb0-c966-4970-818f-e51a99b56c87.png"></p>
 <br/>
 
-**RDIoU:** if VoxSeT uses 3D IoU, check whether i can change it to RDIoU.
+12. **RDIoU:** if VoxSeT uses 3D IoU, check whether i can change it to RDIoU.
 RDIoU: exsiting 3D IoU is sensitive to rotation, thus can cause training instability and detection performance deterioration.
 -> RIoU mitigate the rotation-sensitivity issue, and produce more fficient optimization objectives compared ith 3D IoU during the training stage.
 <br/>
 
-**Voxsl-MAE:** MAE-style pre-training on voxelized point clouds. good for large-scale point cloud dataset.
+13. **Voxsl-MAE:** MAE-style pre-training on voxelized point clouds. good for large-scale point cloud dataset.
 pretty data-efficient. and reduces the need for annotated data. I can refer it for futuer research.
 <br/>
 
-**Masked autoencoder(MAE):** use only 25% of patches(masked random patches) as input image and reconstruct the missing pixels.
+14. **Masked autoencoder(MAE):** use only 25% of patches(masked random patches) as input image and reconstruct the missing pixels.
 And then, reconstruct the original image from the latent representation and mask tokens.
 VERY GOOD PERFORMANCE. I CAN RERER IT.
